@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p> The Array with all Zeros removed is: </p>
+
+<p id="remove_zeros"></p>
+
+<script>
+function removeAllZeros(arr) {
+	var val = 0;
+    var len = arr.length;
+    while (len--) {
+        if (arr[len] === val) {
+            arr.splice(len, 1);
+        }
+    }
+    return arr;
+}
+var a = [0, 1, 2, 'stop', 2, 0, 1, 'stop'];
+document.getElementById("remove_zeros").innerHTML = removeAllZeros(a);
+
+</script>
+
+</body>
+</html>
